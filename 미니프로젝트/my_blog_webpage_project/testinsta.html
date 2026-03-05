@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+
+   * { box-sizing: border-box; }
+
+      .carousel-inner img {
+            width: 100%;  
+            height: 500px;
+            
+        }
+
+        body {
+          margin: auto;
+          position: relative;
+        }
+
+        .carousel-inner {
+            text-align: center;
+        }
+
+        .container {
+          position: relative;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+            height: 100%;
+            width: 1200px;
+        }
+
+        .main-self {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .main-text {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            font-size: 35px;
+            text-shadow: 2px 2px 3px rgb(255, 255, 255);
+        }
+
+        .main2-self {
+            /* border: 5px solid green; */
+            width: 100%;
+            height: 50px;
+            margin: 3px 0;
+        }
+
+        .main2-self ul {
+            display: flex;
+            list-style: none;
+            margin-left: -40px;
+            height: 50px;
+        }
+
+        .main2-self ul li {
+            text-align: center;
+            flex: 1;
+            /* border: 1px solid #000; */
+            height: inherit;
+            float: left;
+        }
+
+        .main2-self ul li a {
+            /* border: 1px solid #000; */
+            display: block;
+            background-color: #f0e4e4;
+            height: 50px;
+            line-height: 50px;
+            color: #000;
+        }
+
+        .main2-self ul li:nth-child(2) {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        .main2-self ul li:nth-child(3) {
+            border-right: 1px solid #ccc;
+        }
+
+        .main2-self ul li a:hover {
+            background-color: #444444;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .sub-text {
+          position: relative;
+        }
+
+        .sub-text::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(-50% 0);
+          border-bottom: 1px solid #aaa;
+          width: 500px;
+          height: 1px;
+        }
+
+        .sub-text::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-50% 0);
+          border-bottom: 1px solid #aaa;
+          width: 500px;
+          height: 1px;
+        }
+
+        
+        .postit-content {
+          text-align: center;
+        }
+
+        .postit-content div {
+          margin: auto;
+          width: 800px;
+        }
+
+        .postit-content div p {
+          text-align: left;
+          padding: 0 10px;
+          font-weight: bold;
+        }
+
+        .postit-content div input[type=text], 
+        .postit-content div textarea {
+          width: 100%;
+          padding: 15px;
+          font-size: 15px;
+          border: none;
+          border-bottom: 1px solid #aaa;
+        }
+
+        .postit-content div textarea {
+          width: 100%;
+          padding: 15px;
+          font-size: 15px;
+          border: none;
+          border: 1px solid #aaa;
+        }
+
+        .postit-content div input[type=button] {
+          border: none;
+          width: 100%;
+          padding: 15px;
+          font-size: 15px;
+        }
+
+        .postit-content div input[type=text]:focus, 
+        .postit-content div input[type=button]:focus, 
+        .postit-content div textarea:focus {
+          outline: none;
+        }
+
+        .postit-content div input[type=button] {
+          cursor: pointer;
+          font-weight: bold;
+          border: 1px solid #ccc;
+        }
+
+        .postit-content div input[type=button]:hover {
+          background-color: #444;
+          color: #fff;
+          transition: 0.3s;
+        }
+
+        /* *{ box-sizing: border-box;  }
+        body{ padding: 30px 30px;    } */
+     
+       .insta{
+            border: 1px solid #dbdbdb; color: gray;
+            margin-top: 50;
+            text-align: center;
+            margin: auto;
+            width: 450px;
+            padding: 20px;
+        }
+        
+        .insta2{
+            border: 1px solid #dbdbdb; color: gray;
+            text-align: center;
+            margin: auto;
+            margin-top: 20px;
+            width: 450px;
+            padding: 20px;
+        }
+
+        .main{ margin-bottom: 5px;    }
+
+        input {
+            background-color: #fafafa;
+            border-width: 1px;
+            border-color: #dbdbdb;
+            border-style: ridge;
+            border-radius: 5px;
+        }
+        input[type=text]{
+            padding-left: 10px;
+            width: 300px;
+            height: 50px;
+        }
+
+
+        input[type=password]{
+            padding-left: 10px;
+            width: 300px;
+            height: 50px;
+        }
+        
+        input[type=button]{
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 5px 30px;
+            border: 0;
+            font-weight: bold;
+            height: 40px;
+            font-size: 12pt;
+        }
+
+        a:hover{ font-weight: bold;     }
+        
+        #contactSync{
+            font-size: 9pt;
+            color: #808280;
+            line-height: 1.3;
+        }
+
+        .devider {
+            display: flex;
+            gap: 1px;
+            align-items: center;
+            margin: 15px;
+            width: 350px;
+            padding-left: 25px;
+        }
+
+        .line {
+            width: 100%;           /* 선의 길이 */
+            height: 1px;           /* 두께 */
+            background-color: #dbdbdb; /* 선 색상 */
+            margin: 15px ;        /*상하 여백*/
+            border: none;          /* 보더 제거 */
+        }
+
+        .or {
+            width: 100px;
+            font-weight: bold;
+        }
+
+        #facebook {
+            background-color: #515ffd;
+        }
+
+        #register {
+            background-color: #858ffe;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>   
+
+<body>
+ <div class="container">
+    <div class="main main-self"><img src="./images/main.jpg" width="100%" height="100%">
+      <b class="main-text"> Seol </b>
+    </div>
+    <div class="main2 main2-self">
+        <ul>
+            <li><a href="./main.html" style="text-decoration-line: none;">Main</a></li>
+            <li> <a href="./post.html" style="text-decoration-line: none;">Post</a></li>
+            <li><a href="./login.html" style="text-decoration-line: none;">Login</a> </li>
+            <li><a href="./join.html" style="text-decoration-line: none;">Sign Up</a> </li>
+            <li><a href="./testinsta.html" style="text-decoration-line: none;">Instagram</a> </li>
+        </ul>
+    </div>
+
+    <h2 class="sub-text" style="text-align: center;"> Instagram </h2>
+    <div class="insta">        
+        <a href="#" target="_blank"><img src="images/instagram.png" alt="" width="200" style="margin-top: 50px;"></a><br>
+        <h3 style="width: 300;"> 친구들의 사진과 동영상을 보려면 가입하<br>세요</h3><br>
+        <a href="#"target="_blank"><input id="facebook" type="button" value="Facebook으로 로그인" style="width: 300px;"></a>
+        <div class="devider">
+        <div class="line"></div><div class="or">또는</div><div class="line"></div>
+        </div>
+
+        <div class="main">
+            <input type="text" placeholder="휴대폰 번호 또는 이메일 주소">
+        </div>
+        <div class="main">
+            <input type="password" placeholder="비밀번호">
+        </div>
+        <div class="main">
+            <input type="text" placeholder="성명">
+        </div>
+        <div class="main">
+            <input type="text" placeholder="사용자 이름"> <br>
+        </div>
+        <div id="contactSync">
+        저희 서비스를 이용하는 사람이 회원님의 연락처 정보<br>
+        를 Instagram에 업로드했을 수도 있습니다.
+        <a href="" style="text-decoration: none; font-size: 9pt; color: blue;">더 알아보<br>기</a> </div><br>
+        <a href="#"target="_blank"><input id="register" type="button" value="가입" style="width: 300px;"></a>
+        
+
+        
+    </div>
+
+    <div class="insta2">
+        <span>계정이 있으신가요??</span><br>
+        <a href="#" target="_blank" style="text-decoration: none">로그인</a>
+    </div>
+    
+    <p style="margin-bottom: 550px;"></p>
+     
+ </div>
+</body>
+</html>
